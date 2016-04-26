@@ -85,7 +85,7 @@ class UserPanelsController < ApplicationController
 
     UserPanel.find(params[:id]).destroy
     flash[:success] = "User destroyed."
-    redirect_to user_panel_path
+    redirect_to user_panels_path
   end
 
   private
