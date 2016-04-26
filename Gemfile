@@ -11,7 +11,7 @@ gem 'bcrypt-ruby', '3.1.2'
 
 group :development do
   gem 'pg', '0.15.1'
-
+end
   #gem 'web-console', '3.0'
   gem 'sass-rails', '4.0.5'
   gem 'uglifier', '2.1.1'
@@ -21,7 +21,7 @@ group :development do
   gem 'jbuilder', '1.0.2'
   #gem 'i18n', '0.7.0'
   gem 'therubyracer'
-end
+
 group :development, :test do
   gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
   gem 'pry-doc'    # methodを表示
