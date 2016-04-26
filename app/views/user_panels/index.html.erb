@@ -1,0 +1,55 @@
+<h1>UserPanel#index</h1>
+<p>Find me in app/views/user_panel/index.html.erb</p>
+<%= link_to 'オリジナルを投稿', new_user_panel_path %>
+<br><br>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8" style="border: 1px solid #009000">
+    <table class="table borderless">
+      <tr>
+      <% @user_panel.each do |user_panel| %>
+        <td>
+        <%= image_tag user_panel.image_url, :class => "thumbnail", :size => '107x80'%>
+        </td>
+        <td width="400">
+        <%= link_to user_panel.title, user_panel_path(user_panel)  %>
+        </td>
+        <td>
+          <%= link_to '編集', edit_user_panel_path(user_panel) %> <br>
+          <%= link_to '削除', user_panel_path(user_panel), method: :delete, data: { confirm: "本気かい？" } %>
+        </td>
+      </tr>
+      <% end %>
+
+    </table>
+    </div>
+
+    <div class="col-md-4" style="border: 1px solid #009000">広告</div>
+<%= debug @user_panel %>
+    </div>
+  </div>
+</div>
+
+<!--{:controller => 'user_panels', :action => 'show' }
+
+<%
+=begin
+%>
+                <div class="col-md-6" style="border: 1px solid #009000">
+                  <% @user_panel.each do |user_panel| %>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                    Ingredient</li>
+                    <li class="list-group-item">
+                    <%= user_panel.ingredient %></li>
+                    <li class="list-group-item">
+                    Seasoning</li>
+                    <li class="list-group-item">
+                    <%= user_panel.seasoning %></li>
+                  <% end %>
+                  </ul>
+                </div>
+<%
+=end
+%>

@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12" style="border: 1px solid #009000">
+          <h1>recipe </h1>
+
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="検索">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default">ボタン</button>
+            </span>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8" style="border: 1px solid #009000">
+          <!--タブ-->
+          <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#tab1" data-toggle="tab">ホーム</a></li>
+            <li role="presentation"><a href="#tab2" data-toggle="tab">メニューＡ</a></li>
+            <li role="presentation"><a href="#tab3" data-toggle="tab">メニューＢ</a></li>
+          </ul>
+
+          <!-- / タブ-->
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="tab1">
+              <div class="col-xs-6 col-md-3">
+
+                <%= @user_panel.each do |p| %>
+
+                  <%= p.image_tag image_url %>
+                <% end %>
+#class="thumbnail"
+
+               </div>
+            </div>
+            <div class="tab-pane fade" id="tab2">
+            <p>コンテンツ2</p>
+            </div>
+            <div class="tab-pane fade" id="tab3">
+            <p>コンテンツ3</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" style="border: 1px solid #009000">広告</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12" style="border: 1px solid #009000">
+          <p>anonimasu</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<h1>Listing basic_recipes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Introduction</th>
+      <!-- <th>Photos</th> -->
+      <th>Ingredient</th>
+      <th>Seasoning</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <% @basic_recipe.each do |basic_recipe| %>
+      <tr>
+        <td><%= basic_recipe.title %></td>
+
+        <td><%= basic_recipe.ingredient %></td>
+        <td><%= basic_recipe.seasoning %></td>
+        <td><%= link_to 'Show', basic_recipe %></td>
+        <td><%= link_to 'Edit', edit_basic_recipe_path(basic_recipe) %></td>
+        <td><%= link_to 'Destroy', basic_recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Basic recipe', new_basic_recipe_path %>

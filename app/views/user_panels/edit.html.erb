@@ -1,0 +1,31 @@
+<h1>UserPanel#edit</h1>
+<p>Find me in app/views/user_panel/edit.html.erb</p>
+
+
+<% provide(:title, 'user_panel') %>
+<h1>user_panel</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user_panel) do |f| %>
+      <%# render 'shared/error_messages' %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :ingredient %>
+      <%= f.text_field :ingredient %>
+
+      <%= f.label :seasoning %>
+      <%= f.text_field :seasoning %>
+
+      <%= f.label :image_url %>
+      <%= f.text_field :image_url %>
+
+      <%= f.hidden_field :user_id, :value => @user_panel.user_id %>
+
+
+      <%= f.submit "post", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
