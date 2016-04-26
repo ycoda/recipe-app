@@ -10,7 +10,7 @@ gem 'bcrypt-ruby', '3.1.2'
 
 
 group :development do
-  gem 'pg', '0.15.1'
+  gem 'sqlite3', '1.3.8'
 end
   #gem 'web-console', '3.0'
   gem 'sass-rails', '4.0.5'
@@ -33,9 +33,11 @@ group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
+=begin
 group :test do
   gem 'sqlite3', '1.3.8'
 end
+=end
 
 group :production do
   gem 'pg', '0.15.1'
