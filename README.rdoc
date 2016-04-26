@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+料理レシピの投稿アプリ
 
-Things you may want to cover:
+・機能
+ユーザー新規登録、
+レシピの投稿、
+ユーザーがログイン後、
+・自身のレシピの一覧表示
+・レシピの投稿
+・削除
+・編集
+ができる。
 
-* Ruby version
+レシピの投稿については
+・タイトル
+・材料
+・調味料
+の３つのカラムを固定で作っています。
 
-* System dependencies
+投稿したもののトップページヘの表示、以外は作りました。
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
