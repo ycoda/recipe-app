@@ -23,6 +23,12 @@ doc/
 .DS_Store
 .idea
 .secret
+.gemrc
+.pryrc
+.rspec
+.tag1
+git
 
 # other
-*.
+*.*
+.*
