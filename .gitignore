@@ -28,6 +28,7 @@ doc/
 .rspec
 .tag1
 git
+.gitignore
 
 # other
 *.*
