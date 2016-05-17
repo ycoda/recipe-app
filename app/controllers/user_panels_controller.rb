@@ -14,7 +14,7 @@ class UserPanelsController < ApplicationController
     @user_panel = UserPanel.new
     @recipe_picture = RecipePicture.new
   end
-
+#
   def create
     @user_panel = UserPanel.new(user_panel_params)
     @recipe_picture = RecipePicture.new(recipe_picture_params)
