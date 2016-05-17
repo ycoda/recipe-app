@@ -1,0 +1,23 @@
+User	/home/ycoda/Dropbox/workspace/recipe/app/models/user.rb	/^class User < ActiveRecord::Base$/;"	class	line:1
+new_remember_token	/home/ycoda/Dropbox/workspace/recipe/app/models/user.rb	/^  def User.new_remember_token$/;"	singleton method	line:23	class:User
+encrypt	/home/ycoda/Dropbox/workspace/recipe/app/models/user.rb	/^  def User.encrypt(token)$/;"	singleton method	line:27	class:User
+create_remember_token	/home/ycoda/Dropbox/workspace/recipe/app/models/user.rb	/^    def create_remember_token$/;"	method	line:32	class:User
+RecipePicture	/home/ycoda/Dropbox/workspace/recipe/app/models/recipe_picture.rb	/^class RecipePicture < ActiveRecord::Base$/;"	class	line:1
+RecipePicturesHelper	/home/ycoda/Dropbox/workspace/recipe/app/helpers/recipe_pictures_helper.rb	/^module RecipePicturesHelper$/;"	module	line:1
+RecipePicturesController	/home/ycoda/Dropbox/workspace/recipe/app/controllers/recipe_pictures_controller.rb	/^class RecipePicturesController < ApplicationController$/;"	class	line:1
+ApplicationController	/home/ycoda/Dropbox/workspace/recipe/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	class	line:1
+store_location	/home/ycoda/Dropbox/workspace/recipe/app/controllers/application_controller.rb	/^  def store_location$/;"	method	line:9	class:ApplicationController
+current_user	/home/ycoda/Dropbox/workspace/recipe/app/controllers/application_controller.rb	/^  def current_user$/;"	method	line:16	class:ApplicationController
+RenameRecipePicturesColumnToRecipePicture	/home/ycoda/Dropbox/workspace/recipe/db/migrate/20160516090138_rename_recipe_pictures_column_to_recipe_picture.rb	/^class RenameRecipePicturesColumnToRecipePicture < ActiveRecord::Migration$/;"	class	line:1
+change	/home/ycoda/Dropbox/workspace/recipe/db/migrate/20160516090138_rename_recipe_pictures_column_to_recipe_picture.rb	/^  def change$/;"	method	line:2	class:RenameRecipePicturesColumnToRecipePicture
+UserPanel	/home/ycoda/Dropbox/workspace/recipe/app/models/user_panel.rb	/^class UserPanel < ActiveRecord::Base$/;"	class	line:1
+UserPanelsController	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^class UserPanelsController < ApplicationController$/;"	class	line:1
+index	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def index$/;"	method	line:3	class:UserPanelsController
+show	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def show$/;"	method	line:8	class:UserPanelsController
+new	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def new$/;"	method	line:13	class:UserPanelsController
+create	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def create$/;"	method	line:18	class:UserPanelsController
+user_panel_params	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^    def user_panel_params$/;"	method	line:41	class:UserPanelsController
+recipe_picture_params	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^    def recipe_picture_params$/;"	method	line:44	class:UserPanelsController
+edit	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def edit$/;"	method	line:48	class:UserPanelsController
+update	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def update$/;"	method	line:52	class:UserPanelsController
+destroy	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def destroy$/;"	method	line:67	class:UserPanelsController

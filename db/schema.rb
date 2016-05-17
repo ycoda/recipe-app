@@ -11,20 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160423074750) do
+ActiveRecord::Schema.define(version: 20160516090138) do
 
-  create_table "basic_recipes", force: true do |t|
-    t.string   "title"
-    t.string   "ingredient"
-    t.string   "seasoning"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-  end
-
-  create_table "relationships", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "user_panel_id"
+  create_table "recipe_pictures", force: true do |t|
+    t.string   "picture_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,7 +26,7 @@ ActiveRecord::Schema.define(version: 20160423074750) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_url"
+    t.string   "recipe_picture_id"
   end
 
   create_table "users", force: true do |t|

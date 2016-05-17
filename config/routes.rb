@@ -1,15 +1,14 @@
 Recipe::Application.routes.draw do
 
   root to: 'top#index'
-  resources :user_panels
-  #resources :basic_recipes
-  #resources :recipe_details
+  resources :top, only: [:index, :show]
   resources :users, only: [:show, :new, :create, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
   match 'signup', to: 'users#new', via: 'get'
   match 'signin', to: 'sessions#new', via:'get'
   match 'signout', to: 'sessions#destroy', via: 'delete'
-  resources :relationships
+  resources :user_panels #, expect: [:index]
+  resources :recipe_pictures
 
 
 =begin

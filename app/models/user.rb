@@ -1,11 +1,16 @@
 class User < ActiveRecord::Base
-  has_many :user_panels, foreign_key: "user_id", dependent: :destroy
-  has_many :relationships, foreign_key: "user_id", dependent: :destroy
-  has_many :user_panels, through: :relationships
+
+  before_save { self.email = email.downcase }
+  before_create :create_remember_token
+  has_many :user_panels
+  #has_many :recipe_pictures #, through: :user_panels
+  # has_many :user_panels, foreign_key: "user_id", dependent: :destroy
+  # has_many :relationships, foreign_key: "user_id", dependent: :destroy
+
+  #has_many :user_panels, through: :relationships
 
 
-   before_save { self.email = email.downcase }
-   before_create :create_remember_token
+
 
   validates :name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

@@ -10,7 +10,7 @@
       <tr>
       <% @user_panel.each do |user_panel| %>
         <td>
-        <%= image_tag user_panel.image_url, :class => "thumbnail", :size => '107x80'%>
+        <%= image_tag user_panel.recipe_picture_id, :class => "thumbnail", :size => '107x80'%>
         </td>
         <td width="400">
         <%= link_to user_panel.title, user_panel_path(user_panel)  %>
