@@ -1,9 +1,3 @@
-<h1>UserPanel#show</h1>
-<p>Find me in app/views/user_panel/show.html.erb</p>
-
-
-
-
 <h1>user_panel of show</h1>
 <p>
   <strong>Title:</strong>
@@ -26,8 +20,13 @@
 </p>
 
 <p>
-  <strong>post-id:</strong>
+  <strong>user-id:</strong>
   <%= @user_panel.user_id %>
+</p>
+
+<p>
+  <strong>post-id:</strong>
+  <%= @user_panel.id %>
 </p>
 
 <%= link_to '投稿したレシピの一覧', user_panels_path %>

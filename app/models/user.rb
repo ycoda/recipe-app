@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   before_save { self.email = email.downcase }
   before_create :create_remember_token
-  has_many :user_panels
+  has_many :user_panels, dependent: :destroy
   #has_many :recipe_pictures #, through: :user_panels
   # has_many :user_panels, foreign_key: "user_id", dependent: :destroy
   # has_many :relationships, foreign_key: "user_id", dependent: :destroy

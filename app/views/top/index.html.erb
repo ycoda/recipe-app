@@ -1,8 +1,7 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12" style="border: 1px solid #009000">
+        <div class="col-md-12" style="border: 1px solid #009000">
           <h1>recipe </h1>
-
           <div class="input-group">
             <input type="text" class="form-control" placeholder="検索">
             <span class="input-group-btn">
@@ -11,41 +10,86 @@
           </div>
         </div>
     </div>
+
     <div class="row">
         <div class="col-md-8" style="border: 1px solid #009000">
           <!--タブ-->
-          <ul class="nav nav-tabs">
+          <!-- <ul class="nav nav-tabs">
             <li role="presentation" class="active"><a href="#tab1" data-toggle="tab">ホーム</a></li>
             <li role="presentation"><a href="#tab2" data-toggle="tab">メニューＡ</a></li>
             <li role="presentation"><a href="#tab3" data-toggle="tab">メニューＢ</a></li>
-          </ul>
+          </ul> -->
 
           <!-- / タブ-->
-          <div id="myTabContent" class="tab-content">
-            <div class="tab-pane fade in active" id="tab1">
-              <div class="col-xs-6 col-md-3">
-                <!-- <a href="user_panels" class="thumbnail"> -->
-                  <%= link_to image_tag('ebi-pirahu.jpg'), '/top/show/', class: "thumbnail" %>
 
-                </a>
+          <!-- <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="tab1">
+
+              <div class="col-sm-6 col-md-2">
+                <! <a href="user_panels" class="thumbnail">
+
               </div>
-              </div>
-            <div class="tab-pane fade" id="tab2">
-            <p>コンテンツ2</p>
             </div>
-            <div class="tab-pane fade" id="tab3">
-            <p>コンテンツ3</p>
-            </div>
+          </div> -->
+          <div class="container-fluid">
+          	<div class="row">
+              <% @user_panel.each do |p| %>
+                <div class="col-md-3">
+                  <!-- aタグだけにclass="img-thumbnail"を書くと写真のデカさがバカでかく
+                なってcol-mdをいじっても小さくならない -->
+                  <!-- aタグにもclass="thumbnail"を書くと写真を囲む線が二重になる -->
+                  <%= link_to image_tag(p.picture.url, class: "img-thumbnail",), top_path(p) %>
+
+                </div>
+              <% end %>
+          	</div>
           </div>
         </div>
+      </div>
+      <div class="row">
         <div class="col-md-4" style="border: 1px solid #009000">
           <%= link_to "新規登録", :controller => "users", :action => "new" %> <br>
           <%= link_to "ログイン", :controller => "sessions", :action => "new" %>
         </div>
-    </div>
+      </div>
+
+
     <div class="row">
         <div class="col-xs-12" style="border: 1px solid #009000">
           <p>anonimasu</p>
         </div>
     </div>
 </div>
+
+
+<%
+=begin
+%>
+ size: "130x100"
+, class: "thumbnail"
+<% @user_panel.each do |p| %>
+<div class="col-md-4">
+  <%= link_to image_tag(@user_panel.picture), "#" %>
+</div>
+<% end %>
+
+#right code
+<%= image_tag @user_panel.picture %>
+
+<% @user_panel.each do |p| %>
+  <%= image_tag p.picture, size: "300x300", class: "img-responsive" %>
+<% end %>
+
+イーチがエラーって言われる
+<% @user_panel.each do |p| %>
+  <%= image_tag p.picture.url %>
+<% end %>
+<%= image_tag @user_panel.picture.url %>
+
+<% binding.pry %>
+  <% if PictureUploader.picture.url? %>
+  <%= link_to image_tag(@user_panel.picture.url), '/top/show/', class: "thumbnail" %>
+  <% end %>
+<%
+=end
+%>

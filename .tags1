@@ -4,13 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-UserPanelsController	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^class UserPanelsController < ApplicationController$/;"	class	line:1
-index	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def index$/;"	method	line:3	class:UserPanelsController
-show	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def show$/;"	method	line:8	class:UserPanelsController
-new	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def new$/;"	method	line:13	class:UserPanelsController
-create	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def create$/;"	method	line:18	class:UserPanelsController
-user_panel_params	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^    def user_panel_params$/;"	method	line:41	class:UserPanelsController
-recipe_picture_params	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^    def recipe_picture_params$/;"	method	line:44	class:UserPanelsController
-edit	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def edit$/;"	method	line:48	class:UserPanelsController
-update	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def update$/;"	method	line:52	class:UserPanelsController
-destroy	/home/ycoda/Dropbox/workspace/recipe/app/controllers/user_panels_controller.rb	/^  def destroy$/;"	method	line:67	class:UserPanelsController

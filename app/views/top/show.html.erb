@@ -1,25 +1,44 @@
 <h1>レシピ詳細ページ</h1>
-<p>
-  <strong>Title:</strong>
-  <%= @user_panel.title %>
-</p>
 
-<p>
-  <strong>Ingredient:</strong>
-  <%= @user_panel.ingredient %>
-</p>
+<%= link_to 'トップページへ戻る', top_index_path %>
+<br>
+<br>
 
-<p>
-  <strong>Seasoning:</strong>
-  <%= @user_panel.seasoning %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @user_panel.title %>
+  </p>
 
-<p>
-  <strong>画像:</strong>
-  <%= image_tag @user_panel.image_url %>
-</p>
+  <p>
+    <strong>Ingredient:</strong>
+    <%= @user_panel.ingredient %>
+  </p>
 
-<p>
-  <strong>post-id:</strong>
-  <%= @user_panel.user_id %>
-</p>
+  <p>
+    <strong>Seasoning:</strong>
+    <%= @user_panel.seasoning %>
+  </p>
+
+  <p>
+    <strong>画像:</strong>
+    <%= image_tag @user_panel.picture, size: "130x100" %>
+  </p>
+
+  <p>
+    <strong>post-id:</strong>
+    <%= @user_panel.user_id %>
+  </p>
+
+
+<%
+=begin
+%>
+<% @user_panel.each do |p| %>
+<% end %>
+<% if @user_panel.exists? %>
+<% else %>
+    redirect_to user_panels_path
+<% end %>
+<%
+=end
+%>

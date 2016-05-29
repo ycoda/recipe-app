@@ -1,8 +1,9 @@
+3e9ec6dd5e5b7ad716ee2e99fb2a8965c3a9e907		branch '2-0' of git://github.com/bmabey/database_cleaner
 d6584cc394b343e02a734f8fb5075b8ed8afdb12		branch 'after_commit_fix' of git://github.com/bmabey/database_cleaner
 c2578e63a4fed2be314201d789c0221e8303bef4		branch 'bundler' of git://github.com/bmabey/database_cleaner
 a12fbb0edb1553dfacbbf421500f4f54c0680332		branch 'fast_merge' of git://github.com/bmabey/database_cleaner
 30c2e8193da6726c963b4b3c8bed3c785748df2a		branch 'gh-pages' of git://github.com/bmabey/database_cleaner
-f15d7610a801e40d1570b56e869e563cdcff198a		branch 'master' of git://github.com/bmabey/database_cleaner
+f052d64d3be9351a98a99e932a59be528ccc561c		branch 'master' of git://github.com/bmabey/database_cleaner
 88abd67b87f3fe8da6dd8b22b234790df1543a21		branch 'mongo-refactor' of git://github.com/bmabey/database_cleaner
 6e554cb2d72610090505ca109280029b3be7b20f		branch 'multi_orms_connections' of git://github.com/bmabey/database_cleaner
 982d62cd4b051e83ce0da8009177c8e0b3161a73		branch 'redis' of git://github.com/bmabey/database_cleaner

@@ -1,6 +1,8 @@
 Recipe::Application.routes.draw do
 
   root to: 'top#index'
+  #root to: 'user_panels#index'
+
   resources :top, only: [:index, :show]
   resources :users, only: [:show, :new, :create, :destroy]
   resources :sessions, only: [:new, :create, :destroy]

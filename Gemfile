@@ -1,14 +1,3 @@
-=begin
-railstutorial
-9章
-なお、必要なgemはここまでですべてインストールしたので、
-今後の章では新たなgemは追加しません。
-参考までに、最終状態のGemfileをリスト9ｆ.47に示します。
-(システム環境に依存する可能性のあるgemはコメントアウトされています。自分の環境で動作するのであれば、それらのgemの行をコメント解除しても構いません。)
-リスト9.47 サンプルアプリケーションの最終Gemfile。
-=end
-
-
 source 'https://rubygems.org'
 ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
@@ -20,6 +9,7 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
@@ -42,7 +32,8 @@ group :development, :test do
   gem 'hirb-unicode'
   gem 'better_errors'
   gem 'binding_of_caller'
-  #gem 'rails-erd'
+  # gem 'rubocop', '~> 0.40.0', require: false
+  # gem 'unicode-display_width', '~> 1.0'
   #gem 'GraphViz'
 end
 
