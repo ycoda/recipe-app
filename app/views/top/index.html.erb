@@ -1,64 +1,41 @@
+
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12" style="border: 1px solid #009000">
-          <h1>recipe </h1>
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="検索">
-            <span class="input-group-btn">
-              <button type="button" class="btn btn-default">ボタン</button>
-            </span>
-          </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-8" style="border: 1px solid #009000">
-          <!--タブ-->
-          <!-- <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#tab1" data-toggle="tab">ホーム</a></li>
-            <li role="presentation"><a href="#tab2" data-toggle="tab">メニューＡ</a></li>
-            <li role="presentation"><a href="#tab3" data-toggle="tab">メニューＢ</a></li>
-          </ul> -->
-
-          <!-- / タブ-->
-
-          <!-- <div id="myTabContent" class="tab-content">
-            <div class="tab-pane fade in active" id="tab1">
-
-              <div class="col-sm-6 col-md-2">
-                <! <a href="user_panels" class="thumbnail">
-
-              </div>
-            </div>
-          </div> -->
-          <div class="container-fluid">
-          	<div class="row">
-              <% @user_panel.each do |p| %>
-                <div class="col-md-3">
-                  <!-- aタグだけにclass="img-thumbnail"を書くと写真のデカさがバカでかく
-                なってcol-mdをいじっても小さくならない -->
-                  <!-- aタグにもclass="thumbnail"を書くと写真を囲む線が二重になる -->
-                  <%= link_to image_tag(p.picture.url, class: "img-thumbnail",), top_path(p) %>
-
-                </div>
-              <% end %>
-          	</div>
-          </div>
+  <!-- ヘッダー部 -->
+  <div class="row">
+      <div class="col-md-12" style="border: 1px solid #009000">
+        <h1>recipe </h1>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="検索">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default">ボタン</button>
+          </span>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4" style="border: 1px solid #009000">
-          <%= link_to "新規登録", :controller => "users", :action => "new" %> <br>
-          <%= link_to "ログイン", :controller => "sessions", :action => "new" %>
-        </div>
+  </div>
+
+  <!-- コンテンツ部 -->
+  <div class="row">
+      <div class="col-md-8" style="border: 1px solid #009000">
+        <% @user_panel.each do |p| %>
+            <!-- aタグだけにclass="img-thumbnail"を書くと写真のデカさがバカでかく
+          なってcol-mdをいじっても小さくならない -->
+            <!-- aタグにもclass="thumbnail"を書くと写真を囲む線が二重になる -->
+            <%= link_to image_tag(p.picture.url, class: "img-thumbnail", size: "143x110"), top_path(p) %>
+        <% end %>
       </div>
 
+      <div class="col-md-4" style="border: 1px solid #009000">
+        <%= link_to "新規登録", :controller => "users", :action => "new" %> <br>
+        <%= link_to "ログイン", :controller => "sessions", :action => "new" %>
+      </div>
+  </div>
 
-    <div class="row">
-        <div class="col-xs-12" style="border: 1px solid #009000">
-          <p>anonimasu</p>
-        </div>
+  <!-- フッタ−部 -->
+  <div class="row">
+    <div class="col-md-12" style="border: 1px solid #009000">
+      <p>anonimasu</p>
     </div>
+  </div>
 </div>
 
 
@@ -90,6 +67,49 @@
   <% if PictureUploader.picture.url? %>
   <%= link_to image_tag(@user_panel.picture.url), '/top/show/', class: "thumbnail" %>
   <% end %>
+
+
+
+# タブの設定--始端
+  <!--タブ-->
+  <!-- <ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="#tab1" data-toggle="tab">ホーム</a></li>
+    <li role="presentation"><a href="#tab2" data-toggle="tab">メニューＡ</a></li>
+    <li role="presentation"><a href="#tab3" data-toggle="tab">メニューＢ</a></li>
+  </ul> -->
+
+  <!-- / タブ-->
+
+  <!-- <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade in active" id="tab1">
+
+      <div class="col-sm-6 col-md-2">
+        <! <a href="user_panels" class="thumbnail">
+
+      </div>
+    </div>
+  </div> -->
+# タブの設定--コメント終端
+
+
+<%
+=end
+%>
+<%
+=begin
+%>
+          <div class="container-fluid">
+          	<div class="row">
+            <div class="col-md-3">
+<%
+=end
+%>
+<%
+=begin
+%>
+              </div>
+          	</div>
+          </div>
 <%
 =end
 %>

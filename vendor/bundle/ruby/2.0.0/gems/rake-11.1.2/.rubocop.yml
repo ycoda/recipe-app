@@ -25,3 +25,6 @@ WhileUntilModifier:
 
 IfUnlessModifier:
   Enabled: false
+
+Style/AsciiComments:
+  Enabled: false

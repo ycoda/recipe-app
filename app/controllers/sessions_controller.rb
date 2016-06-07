@@ -6,8 +6,10 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
+      #　これでUserモデルの主キーが取れる
       sign_in user
-      redirect_to  user
+      #　リダレクトでuser_panelのindexへ
+      redirect_to  user_panels_path
     else
       flash.now[:error] = 'eメールかパスワードがまちがってまする'
       render 'new'

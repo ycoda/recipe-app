@@ -1,24 +1,18 @@
 class User < ActiveRecord::Base
-
   before_save { self.email = email.downcase }
   before_create :create_remember_token
+
   has_many :user_panels, dependent: :destroy
-  #has_many :recipe_pictures #, through: :user_panels
-  # has_many :user_panels, foreign_key: "user_id", dependent: :destroy
-  # has_many :relationships, foreign_key: "user_id", dependent: :destroy
 
-  #has_many :user_panels, through: :relationships
-
-
-
-
-  validates :name, presence: true, length: { maximum: 50 }
+  validates :name, presence: true, length: { maximum: 30 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence:   true,
+                    length:     {maximum: 255},
                     format:     { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, length: { minimum: 6 }
+#  validates :password, length: { 6から30文字まで }
+ validates :password, length: { in: 6..30 }
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64

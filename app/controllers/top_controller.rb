@@ -1,11 +1,11 @@
 class TopController < ApplicationController
-#before_action :correct_user, only: :index
+#. before_action :correct_user, only: :index
   def index
     # @user_panel = UserPanel.find(1)
     # @user_panel = UserPanel.select("picture")
     # @user_panel = UserPanel.find(:all)
     @user_panel = UserPanel.where("picture not ?", nil)
-    # @user_panel.save #saveできない　#relationの関係がどうと言われる
+    #. @user_panel.save #saveできない　#relationの関係がどうと言われる
   end
 
   def show

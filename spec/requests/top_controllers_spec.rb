@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe "Micropost pages" do
+describe "top pages" do
 
-  describe "micropost destruction" do
-    before { FactoryGirl.create(:user_panel, user_id: user) }
+  describe "login" do
+    before { (visit signin_path) }
 
-    describe "as correct user" do
-      before { visit user_panels_path }
+    # describe "as correct user" do
+    #   before { visit user_panels_path }
 
-    end
+    # end
   end
 end
 

@@ -29,6 +29,7 @@ doc/
 .tag1
 git
 .gitignore
+bundler_stubs/
 
 # other
 *.*
