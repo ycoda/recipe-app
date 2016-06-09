@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160609072720) do
-
-  create_table "recipe_pictures", force: true do |t|
-    t.string   "picture_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.binary   "picture_file"
-  end
+ActiveRecord::Schema.define(version: 20160609123555) do
 
   create_table "user_panels", force: true do |t|
     t.string   "title"
