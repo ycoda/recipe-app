@@ -10,9 +10,10 @@ class User < ActiveRecord::Base
                     length:     {maximum: 255},
                     format:     { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-  has_secure_password
 #  validates :password, length: { 6から30文字まで }
- validates :password, length: { in: 6..30 }
+  validates :password, length: { in: 6..30 }
+
+  has_secure_password
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64
