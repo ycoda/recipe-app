@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module Recipe
   class Application < Rails::Application
     # below check comment switch out on
-    # config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
+    config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
