@@ -27,10 +27,6 @@ doc/
 .pryrc
 .rspec
 .tag1
-git
-.gitignore
-bundler_stubs/
 
-# other
-*.*
-.*
+# ignore directory
+/vendor/bundle
