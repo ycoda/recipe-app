@@ -6,20 +6,19 @@ gem 'rails', '4.0.5'
 gem 'bootstrap-sass', '3.3.2.0'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
-gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
-gem 'carrierwave'
+# gem 'carrierwave'
+gem "heroku-forward"
 
 
 
 group :development, :test do
   # gem 'sqlite3', '1.3.8'
   gem 'sqlite3', '1.3.10'
-
   gem 'rspec-rails', '2.13.1'
-  #gem 'cucumber-rails', '1.4.0', require: :false
-  #gem 'therubyracer', platforms: :ruby
+  gem 'faker', '1.1.2'
+
   # # The following optional lines are part of the advanced setup.
   gem 'guard', '2.6.1'
   gem 'guard-rspec', '2.5.0'
@@ -40,6 +39,8 @@ group :development, :test do
   gem 'binding_of_caller'
   #gem 'rubocop' 使えない。多数のgemのバージョンアップが必要になる。
   #gem 'rubocop-rspec'
+  #gem 'cucumber-rails', '1.4.0', require: :false
+
 end
 
 group :test do
@@ -47,7 +48,6 @@ group :test do
   # gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.1'
-
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   # Uncomment this line on OS X.
   # gem 'growl', '1.0.3'
