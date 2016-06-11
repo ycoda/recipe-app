@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hdcbbjjjs
+  api_key: '923175526173419'
+  api_secret: H2CM77rGBWJ-s6pr6ojeFRiy4J0
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hdcbbjjjs
+  api_key: '923175526173419'
+  api_secret: H2CM77rGBWJ-s6pr6ojeFRiy4J0
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hdcbbjjjs
+  api_key: '923175526173419'
+  api_secret: H2CM77rGBWJ-s6pr6ojeFRiy4J0
+  enhance_image_tag: true
+  static_image_support: false

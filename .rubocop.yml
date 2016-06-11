@@ -1,0 +1,28 @@
+#.rubocop.yml
+inherit_from: .rubocop_todo.yml
+# require: rubocop-rspec
+
+Rails:
+  Enabled: true
+
+AllCops:
+  # RunRailsCops: true # Rails向けのチェックも行う
+  Include:
+    # - '**/Rakefile'
+    - 'app/*'
+    - '**/config.ru'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bundle_bin/*'
+    - 'bin/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+    - 'vendor/*'
+    - 'spec/*'
+    - 'test/*'
+    - 'tmp/*'
+    - 'log/*'
+    
+  AsciiComments:
+  Enabled: false

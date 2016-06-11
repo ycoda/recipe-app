@@ -29,4 +29,4 @@ doc/
 .tag1
 
 # ignore directory
-/vendor/bundle
+/vendor/bundle/

@@ -25,3 +25,32 @@ production:
   timeout: 5000
   username: bcrfymxzdwiaes
   password: knVKRqy3d1IexpdtgPYROXd-py
+
+# production:
+#   adapter: postgresql
+#   database: recipe_production
+#   pool: 5
+#   timeout: 5000
+#   username: recipe
+#   password: <%= ENV['RECIPE_DATABASE_PASSWORD'] %>
+
+
+# default: &default
+#   adapter: postgresql
+#   pool: 5
+#   timeout: 5000
+#   encoding: unicode
+#   username: bcrfymxzdwiaes
+#   password: knVKRqy3d1IexpdtgPYROXd-py
+#
+# development:
+#   <<: *default
+#   database: recipe_development
+#
+# test:
+#   <<: *default
+#   database: recipe_test
+#
+# production:
+#   <<: *default
+#   database: recipe_production
