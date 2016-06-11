@@ -8,38 +8,7 @@
 <div class="row">
   <div class="span6 offset3">
 
-<%
-=begin
-%>
-    <%= form_tag({ controller: :user_panels, action: :create}) do %>
-      <%= label :user_panels, :title %>
-      <%= text_field :user_panels, :title %>
-
-      <%= label :user_panels, :ingredient %>
-      <%= text_field :user_panels, :ingredient %>
-
-      <%= label :user_panels, :seasoning %>
-      <%= text_field :user_panels, :seasoning %>
-
-      <%= label :recipe_pictures, :picture_name %>
-      <%= text_field :recipe_pictures, :picture_name %>
-
-      <%= submit_tag "post", class: "btn btn-large btn-primary" %>
-    <% end %>
-<%
-=end
-%>
-
-
-<%
-=begin
-%>
-:html => {multipart: :true}
-をrecipe_pictureに書かないと動かないんだけんどどうしようか
-<%
-=end
-%>
-    <%= form_for(@user_panel, :html => {:multipart => true}) do |f| %>
+    <% form_for @user_panel, :html => { :multipart => true }  do |f| %>
       <%# render 'shared/error_messages' %>
 
       <%= f.label :title %>
@@ -58,39 +27,3 @@
   <% end %>
   </div>
 </div>
-
-<%
-=begin
-%>
-<!-- fields_for #モデルを固定してフォームを作成する。form_forでのみ使える。 -->
-        <%= fields_for(@recipe_picture) do |p| %>
-          <%= p.file_field :picture_file %>
-        <% end %>
-
-
-<%
-=end
-%>
-<%
-=begin
-%>
-          <%= p.label :picture_name %>
-          <%= p.text_field :picture_name %>
-<%
-=end
-%>
-
-
-
-<%
-=begin
-%>
-      <%= f.hidden_field :user_id, :value => @current_user.user_id %>
-
-<%= f.hidden_field :user_id, :value => current_user.id %>
-<p><%= current_user.id %></p>
-<%
-=end
-%>
-
-<!-- :value => current_user.id #これがエラーになる。idを1しかとってこない。おかしい。 -->
