@@ -8,7 +8,7 @@ gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
-gem 'carrierwave'
+gem 'carrierwave', '0.10.0'
 gem 'cloudinary'
 
 
