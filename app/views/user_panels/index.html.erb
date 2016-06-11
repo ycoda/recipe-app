@@ -8,7 +8,7 @@
     <div class="col-md-8" style="border: 1px solid #009000">
     <table class="table borderless">
       <tr>
-      <% @user_panel.each do |user_panel| %>
+      <%= @user_panel.each do |user_panel| %>
         <td>
           <%= image_tag user_panel.picture.url, :class => "img-thumbnail", :size => '107x80'%>
         </td>
