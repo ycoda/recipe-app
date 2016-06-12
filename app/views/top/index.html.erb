@@ -16,7 +16,7 @@
   <!-- コンテンツ部 -->
   <div class="row">
       <div class="col-md-8" style="border: 1px solid #009000">
-        <%= @user_panel.each do |p| %>
+        <% @user_panel.each do |p| %>
           <%= link_to image_tag(p.picture.url, class: "img-thumbnail", size: "143x110"), top_path(p) %>
         <% end %>
       </div>

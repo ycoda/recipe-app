@@ -28,5 +28,5 @@ Recipe::Application.configure do
   config.assets.debug = true
 
   # gem "heroku-forward" config
-  config.middleware.use Rails::Rack::LogTailer
+  # config.middleware.use Rails::Rack::LogTailer
 end

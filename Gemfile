@@ -3,9 +3,12 @@ ruby '2.0.0'
 
 
 gem 'rails', '4.0.5'
-gem 'bootstrap-sass', '3.3.2.0'
+gem 'pg', '0.15.1'
+
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
+#view
+gem 'bootstrap-sass', '3.3.2.0'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'carrierwave', '0.10.0'
@@ -63,11 +66,12 @@ group :test do
 end
 
 gem 'sass-rails', '4.0.5'
-gem 'uglifier', '2.1.1'
+# javascript
+gem 'uglifier', '2.1.1' #JavaScriptのコード軽量化ライブラリを、Ruby使えるようにした
 gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
-gem 'turbolinks', '1.1.1'
-gem 'jbuilder', '1.0.2'
+gem 'turbolinks', '1.1.1' #ページ遷移をAjaxに置き換え、JavaScriptやCSSのパースを省略する
+gem 'jbuilder', '1.0.2' #jsonテンプレート
 # gem 'therubyracer', platforms: :ruby
 # DB is all posgre
 
@@ -77,6 +81,5 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
