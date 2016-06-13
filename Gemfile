@@ -72,9 +72,7 @@ gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
 gem 'turbolinks', '1.1.1' #ページ遷移をAjaxに置き換え、JavaScriptやCSSのパースを省略する
 gem 'jbuilder', '1.0.2' #jsonテンプレート
-# gem 'therubyracer', platforms: :ruby
-# DB is all posgre
-
+gem 'therubyracer'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
